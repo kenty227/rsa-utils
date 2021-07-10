@@ -1,0 +1,36 @@
+{
+    "name": "kenty/rsa-utils",
+    "description": "A library for RSA encryption and decryption",
+    "type": "library",
+    "authors": [
+        {
+            "name": "WuBaiJian",
+            "email": "shiro50831@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0.0",
+        "ext-openssl": "*",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kenty\\RsaUtils\\": "src"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Kenty\\RsaUtils\\Install::postInstallOrUpdate"
+        ],
+        "post-update-cmd": [
+            "Kenty\\RsaUtils\\Install::postInstallOrUpdate"
+        ],
+        "install-rsa-utils": [
+            "Kenty\\RsaUtils\\Install::generateKeyPair"
+        ]
+    },
+    "scripts-descriptions": {
+        "install-rsa-utils": "Generate a new key pair for the rsa-utils package!"
+    }
+}
